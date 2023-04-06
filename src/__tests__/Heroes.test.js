@@ -9,7 +9,7 @@ import Character from '../js/Character';
 const listHeroes = [
   [
     'Bowerman',
-    new Bowerman('ivan',),
+    new Bowerman('ivan'),
     {
       name: 'ivan',
       type: 'Bowerman',
@@ -89,4 +89,4 @@ test('Test Character invalid name value', () => {
 });
 test('Test Character invalid type', () => {
   expect(() => new Character('Gin', 'Superman')).toThrow();
-})
+});
