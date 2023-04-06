@@ -9,7 +9,7 @@ import Character from '../js/Character';
 const listHeroes = [
   [
     'Bowerman',
-    new Bowerman('ivan'),
+    new Bowerman('ivan',),
     {
       name: 'ivan',
       type: 'Bowerman',
@@ -87,3 +87,6 @@ test.each(listHeroes)('test %s', (_, classObj, result) => {
 test('Test Character invalid name value', () => {
   expect(() => new Character('n')).toThrow();
 });
+test('Test Character invalid type', () => {
+  expect(() => new Character('Gin', 'Superman')).toThrow();
+})
